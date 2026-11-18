@@ -3,6 +3,10 @@ student21.wt.thomasjuldo.com {
 	handle_path /portfolio/* {
 		reverse_proxy portfolio:80
 	}
+	redir /music-viz /music-viz/
+	handle_path /music-viz/* {
+		reverse_proxy music-viz:80
+	}
 	handle_path /api/* {
 		reverse_proxy api:8082
 	}
